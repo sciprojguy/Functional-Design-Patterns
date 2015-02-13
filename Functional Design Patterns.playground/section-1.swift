@@ -169,7 +169,7 @@ let minRating:Int = reduce( restaurants, Rating.FourStars.rawValue, { (accum:Int
     return accum > r.rating.rawValue ? r.rating.rawValue : accum
 })
 
-let maxRating:Int = reduce( restaurants, Rating.FourStars.rawValue, { (accum:Int, r:Restaurant) -> Int in
+let maxRating:Int = reduce( restaurants, Rating.OneStar.rawValue, { (accum:Int, r:Restaurant) -> Int in
     return accum < r.rating.rawValue ? r.rating.rawValue : accum
 })
 
